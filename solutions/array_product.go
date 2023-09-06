@@ -1,6 +1,6 @@
-package main
+package solutions
 
-func productExceptSelf(nums []int) []int {
+func ProductExceptSelf(nums []int) []int {
     ans := make([]int, len(nums))
     product := getProduct(nums,-1)
     for idx, val := range nums{

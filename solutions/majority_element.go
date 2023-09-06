@@ -1,6 +1,6 @@
-package main
+package solutions
 
-func majorityElement(nums []int) int {
+func MajorityElement(nums []int) int {
     count := 0
 	majElement := nums[0]
 	for _, num := range nums{

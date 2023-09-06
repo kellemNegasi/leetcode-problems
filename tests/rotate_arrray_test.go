@@ -1,8 +1,9 @@
-package main
+package tests
 
 import (
 	"testing"
 
+	"github.com/KellemNegasi/leetcode/solutions"
 	"github.com/stretchr/testify/require"
 )
 
@@ -35,7 +36,7 @@ func TestRotate(t *testing.T){
 	}
 
 	for _, tCase := range testCases{
-		rotate(tCase.input,tCase.k)
+		solutions.Rotate(tCase.input,tCase.k)
 		require.Equal(t,tCase.output,tCase.input)
 	}
 }

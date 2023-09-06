@@ -1,4 +1,4 @@
-package main
+package solutions
 
 import "strings"
 
@@ -20,13 +20,12 @@ var intToRom = map[int]string{
 	500:  "D",
 	1000: "M"}
 
-func romanToInt(s string) int {
+func RomanToInt(s string) int {
 	totalValue := 0
 	n := len(s)
 	for i := n - 1; i >= 0; i-- {
 		symbol := string(s[i])
 		currentValue := romToInt[symbol]
-
 		if i > 0 {
 			prev := peek(s, i)
 			if prev < currentValue {
@@ -44,7 +43,7 @@ func peek(s string, index int) int {
 	return romToInt[string(s[index-1])]
 }
 
-func intToRoman(num int) string {
+func IntToRoman(num int) string {
 	output := ""
 	divider := 10
 	result := 1
@@ -53,9 +52,10 @@ func intToRoman(num int) string {
 		result = num / divider
 		rem := num % divider
 		place := divider / 10
-		rom := ""
-		rom = computeRoman(rem, place,result)
-		output = rom + output
+		if rem!=0{
+			rom := computeRoman(rem, place,result)
+			output = rom + output
+		}
 		num = result*divider
 		divider *= 10
 	}
@@ -68,15 +68,15 @@ func computeRoman(rem, place,result int) string {
 		return val
 	}
 	// check upper bound
-	romanNumber := intToRom[place]
 	upper := rem + place
+	romanNumber := intToRom[place]
 	if val, ok := intToRom[upper]; ok {
 		return romanNumber + val
 	}
 
 	// check lower
 	for i:=1;i<4;i++{
-		lower := rem-i
+		lower := rem-i*place
 		if val, ok := intToRom[lower];ok{
 			return val+strings.Repeat(romanNumber,i)
 		}

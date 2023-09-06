@@ -1,6 +1,6 @@
-package main
+package solutions
 
-func rotate(nums []int, k int)  {
+func Rotate(nums []int, k int)  {
 	k = k%len(nums)
 	reverse(nums,0,len(nums)-1)
 	reverse(nums,0,k-1)

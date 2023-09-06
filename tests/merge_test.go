@@ -1,8 +1,9 @@
-package main
+package tests
 
 import (
 	"testing"
 
+	"github.com/KellemNegasi/leetcode/solutions"
 	"github.com/stretchr/testify/require"
 )
 
@@ -51,7 +52,7 @@ func TestMerge(t *testing.T){
 	}
 
 	for _, tCase := range cases{
-		merge(tCase.nums1,tCase.m,tCase.nums2,tCase.n)
+		 solutions.Merge(tCase.nums1,tCase.m,tCase.nums2,tCase.n)
 		require.Equal(t,tCase.expected,tCase.nums1)
 	}
 }

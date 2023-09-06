@@ -1,8 +1,9 @@
-package main
+package tests
 
 import (
 	"testing"
 
+	"github.com/KellemNegasi/leetcode/solutions"
 	"github.com/stretchr/testify/require"
 )
 
@@ -29,7 +30,7 @@ func TestRemoveElement(t *testing.T) {
 	}
 
 	for _, tCase := range cases {
-		actual := removeElement(tCase.input, tCase.val)
+		actual :=  solutions.RemoveElement(tCase.input, tCase.val)
 		require.Equal(t, tCase.output, actual)
 		require.Equal(t, tCase.expected, tCase.input)
 	}
@@ -56,7 +57,7 @@ func TestRemoveDuplicates(t *testing.T) {
 	}
 
 	for _, tCase := range cases {
-		actual := removeDuplicates(tCase.input)
+		actual :=  solutions.RemoveDuplicates(tCase.input)
 		require.Equal(t, tCase.output, actual)
 		require.Equal(t, tCase.expected, tCase.input)
 	}
@@ -82,7 +83,7 @@ func TestRemoveDuplicatesII(t *testing.T){
 	}
 
 	for _, tCase := range cases {
-		actual := removeDuplicatesII(tCase.input)
+		actual := solutions.RemoveDuplicatesII(tCase.input)
 		require.Equal(t, tCase.output, actual)
 		require.Equal(t, tCase.expected, tCase.input)
 	}

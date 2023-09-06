@@ -1,8 +1,9 @@
-package main
+package tests
 
 import (
 	"testing"
 
+	"github.com/KellemNegasi/leetcode/solutions"
 	"github.com/stretchr/testify/require"
 )
 
@@ -25,7 +26,7 @@ func TestMajorityElement(t *testing.T) {
 		},
 	}
 	for _, tCase := range testCases{
-		answer := majorityElement(tCase.input)
+		answer :=  solutions.MajorityElement(tCase.input)
 		require.Equal(t, tCase.output,answer)
 	}
 }

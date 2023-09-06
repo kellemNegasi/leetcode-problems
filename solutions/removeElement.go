@@ -1,6 +1,6 @@
-package main
+package solutions
 
-func removeElement(nums []int, val int) int {
+func RemoveElement(nums []int, val int) int {
 	idx := 0
 	curPos := 0
 	removedElements := 0
@@ -25,7 +25,7 @@ func removeElement(nums []int, val int) int {
 	return l - removedElements
 }
 
-func removeDuplicates(nums []int) int {
+func RemoveDuplicates(nums []int) int {
 	idx := 1
 	curPos := 1
 	removedElements := 0
@@ -52,7 +52,7 @@ func removeDuplicates(nums []int) int {
 	return l - removedElements
 }
 
-func removeDuplicatesII(nums []int) int {
+func RemoveDuplicatesII(nums []int) int {
 	idx := 1
 	curPos := 1
 	removedElements := 0

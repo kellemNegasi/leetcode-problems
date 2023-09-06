@@ -1,8 +1,9 @@
-package main
+package tests
 
 import (
 	"testing"
 
+	"github.com/KellemNegasi/leetcode/solutions"
 	"github.com/stretchr/testify/require"
 )
 
@@ -38,7 +39,7 @@ func TestMaxProfit(t *testing.T) {
 	}
 
 	for _, tCase := range testCases {
-		output := maxProfit(tCase.input)
+		output := solutions.MaxProfit(tCase.input)
 		require.Equal(t, tCase.output, output)
 	}
 }

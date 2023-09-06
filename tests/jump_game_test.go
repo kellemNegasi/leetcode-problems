@@ -1,8 +1,9 @@
-package main
+package tests
 
 import (
 	"testing"
 
+	"github.com/KellemNegasi/leetcode/solutions"
 	"github.com/stretchr/testify/require"
 )
 
@@ -42,7 +43,7 @@ func TestCanJump(t *testing.T){
 	}
 
 	for _, tCase := range testCases{
-		output := canJump(tCase.input)
+		output :=  solutions.CanJump(tCase.input)
 		_ = output
 		require.Equal(t, tCase.output, output)
 	}
@@ -84,7 +85,7 @@ func TestCanJumpII(t *testing.T){
 	}
 
 	for _, tCase := range testCases{
-		output := canJumpII(tCase.input)
+		output :=  solutions.CanJumpII(tCase.input)
 		require.Equal(t, tCase.output, output)
 	}
 }

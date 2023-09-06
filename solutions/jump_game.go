@@ -1,11 +1,11 @@
-package main
+package solutions
 
 import (
 	"fmt"
 	"math"
 )
 
-func canJump(nums []int) bool {
+func CanJump(nums []int) bool {
 	i := 0
 	count := 0
 	found := false
@@ -36,7 +36,7 @@ func max(num1, num2 int) int {
 	return num2
 }
 
-func canJumpII(nums []int) int {
+func CanJumpII(nums []int) int {
 	jumpTable := make([]int, len(nums)-1)
 	return computeJumpsDynamic(len(nums)-2, nums, jumpTable)
 }

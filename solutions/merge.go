@@ -1,6 +1,6 @@
-package main
+package solutions
 
-func merge(nums1 []int, m int, nums2 []int, n int){
+func Merge(nums1 []int, m int, nums2 []int, n int){
 	if len(nums2)==0{
 		return
 	}

@@ -1,8 +1,9 @@
-package main
+package tests
 
 import (
 	"testing"
 
+	"github.com/KellemNegasi/leetcode/solutions"
 	"github.com/stretchr/testify/require"
 )
 
@@ -34,7 +35,7 @@ func TestRomanToInt(t *testing.T) {
 	}
 
 	for _, tCase := range testCases {
-		output := romanToInt(tCase.input)
+		output :=  solutions.RomanToInt(tCase.input)
 		require.Equal(t, tCase.output, output)
 	}
 }
@@ -44,42 +45,46 @@ func TestIntToRoman(t *testing.T) {
 		input  int
 		output string 
 	}{
-		// {
-		// 	input: 3,
-		// 	output:  "III",
-		// },
-		// {
-		// 	input: 2,
-		// 	output:  "II",
-		// },
-		// {
-		// 	input: 6,
-		// 	output:  "VI",
-		// },
-		// {
-		// 	input: 15,
-		// 	output:  "XV",
-		// },
-		// {
-		// 	input: 9,
-		// 	output:  "IX",
-		// },
-		// {
-		// 	input: 1994,
-		// 	output: "MCMXCIV",
-		// },
+		{
+			input: 3,
+			output:  "III",
+		},
+		{
+			input: 2,
+			output:  "II",
+		},
+		{
+			input: 6,
+			output:  "VI",
+		},
+		{
+			input: 15,
+			output:  "XV",
+		},
+		{
+			input: 9,
+			output:  "IX",
+		},
+		{
+			input: 1994,
+			output: "MCMXCIV",
+		},
 		{
 			input: 10,
 			output: "X",
 		},
 		{
 			input: 20,
-			output: "X",
+			output: "XX",
+		},
+		{
+			input: 2032,
+			output: "MMXXXII",
 		},
 	}
 
 	for _, tCase := range testCases {
-		output := intToRoman(tCase.input)
+		output := solutions.IntToRoman(tCase.input)
 		require.Equal(t, tCase.output, output)
 	}
 }

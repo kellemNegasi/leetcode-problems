@@ -1,8 +1,8 @@
-package main
+package solutions
 
 import "math"
 
-func maxProfit(prices []int) int {
+func MaxProfit(prices []int) int {
 	minPrice := math.MaxInt
 	mProfit := 0
 	for i := 0; i < len(prices); i++ {
